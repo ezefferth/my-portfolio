@@ -1,4 +1,6 @@
 .container {
+  display: block;
+
   .presentation {
     padding-top: 40vh;
     text-align: center;
@@ -19,7 +21,8 @@
 
   .about {
     text-align: center;
-    height: 70vh;
+    //height: 70vh;
+    padding-bottom: 5rem;
 
     .sobreH5 {
       padding-top: 6rem;
@@ -29,6 +32,7 @@
       padding-top: 4rem;
       width: 50vw;
       margin-left: 25vw;
+
       //background-color: rgb(255, 240, 254);
       /* @media (max-width: 1920px){
         width: 50vw;
@@ -41,31 +45,170 @@
         text-align: left;
         padding-right: 3rem;
         padding-top: 1rem;
+        color: var(--gray-800);
       }
+
       .colLeft {
         width: 10vw;
         text-align: right;
+
         .fotoPerfil {
           border-radius: 5rem;
         }
       }
+
       .colRight {
         width: 40vw;
       }
-    } //fim resumo
-  } //fim about
+    }
+
+    //fim resumo
+  }
+
+  //fim about
   .profile {
-    height: 70vh;
-    background-color: var(--gray-100);
+    //height: 70vh;
+    //background-color: var(--gray-100);
 
     .colLeft {
       //width: 10vw;
-      background-color: var(--gray-200);
+
       text-align: left;
-      
-      h6, p{
-        padding-left: 20vw;
+      padding-top: 5rem;
+
+      h5,
+      p {
+
+        padding-left: 30vw;
+        max-width: 50vw;
+      }
+
+      p {
+        color: var(--gray-800);
       }
     }
+
+    //fim colLeft
+    .colRight {
+      text-align: left;
+      padding-top: 5rem;
+
+      p {
+        color: var(--gray-800);
+      }
+
+
+      .skills {
+        padding-top: 0.5rem;
+
+        .linear {
+          width: 22vw;
+        }
+
+        h6 {
+          padding-top: 1rem;
+        }
+      }
+
+      //skills
+    }
+
+    //colRight
+  }
+
+  //profile
+
+  .resumoQuali {
+    text-align: center;
+    //height: 200vh; //tirar dps
+    padding-top: 5rem;
+    background-color: var(--gray-100);
+    padding-bottom: 5rem;
+
+    h4 {
+      padding-top: 4rem;
+    }
+
+    .profEdu {
+      padding-top: 3rem;
+
+      .colLeft {
+
+        text-align: right;
+        padding: 0.25rem 2rem 0.25rem 2rem;
+        border-right: 1px solid var(--gray-200);
+
+        width: 25vw;
+
+        p {
+          //text-align: left;
+          color: var(--gray-800)
+        }
+
+        .icon {
+          position: absolute;
+          color: var(--gray-800);
+          transform: translate(150%, -100%);
+        }
+
+        .iconE {
+          position: absolute;
+          color: var(--gray-800);
+          transform: translate(100%, -100%);
+        }
+
+      }
+
+      .colRight {
+        padding-left: 2rem;
+        text-align: left;
+
+        p {
+          color: var(--gray-800);
+
+        }
+      }
+    }//fim proEdu
+
+    .profEduFinal{
+      padding-top: 5rem;
+
+      .language, .hobbie, .profit{
+        text-align: left;
+        width: 20vw;
+      }
+      .divLanguage{
+        display: flex;
+        //justify-items: center;
+        align-items: center;
+        //align-content: center;
+        
+      }
+
+
+    }
+
+
+  }//fim resumoQuali
+
+  
+
+  .portfolio {
+    height: 100vh;
+
+    h5 {
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+  }
+
+  footer{
+    background-color: #2c2c2c;
+    height: 80vh;
   }
 }
