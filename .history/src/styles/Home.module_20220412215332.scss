@@ -1,0 +1,53 @@
+.container {
+  .presentation {
+    padding-top: 40vh;
+    text-align: center;
+
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+
+    .iconsDiv {
+      padding-top: 45vh;
+
+      .icon {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .about {
+    text-align: center;
+    height: 70vh;
+
+    .sobreH5 {
+      padding-top: 6rem;
+    }
+
+    .resumo {
+      padding-top: 2rem;
+      width: 70vw;
+      margin-left: 15vw;
+      background-color: rgb(255, 240, 254);
+
+      /* .resumoText{
+
+
+      } */
+      .colLeft {
+        width: 15vw;
+
+
+
+        .fotoPerfil {
+          border-radius: 5rem;
+          float: right;
+        }
+      }
+      .colRight {
+        width: 55vw;
+      }
+    }
+  }
+}
