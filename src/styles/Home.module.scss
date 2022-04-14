@@ -6,7 +6,7 @@
     text-align: center;
 
     background-color: aliceblue;
-    width: 100vw;
+    //width: 100vw;
     height: 100vh;
 
     .iconsDiv {
@@ -80,7 +80,7 @@
       p {
 
         padding-left: 30vw;
-        max-width: 50vw;
+        width: 50vw;
       }
 
       p {
@@ -168,30 +168,37 @@
 
         }
       }
-    }//fim proEdu
+    }
 
-    .profEduFinal{
+    //fim proEdu
+
+    .profEduFinal {
       padding-top: 5rem;
 
-      .language, .hobbie, .profit{
+      .language,
+      .hobbie,
+      .profit {
         text-align: left;
         width: 20vw;
       }
-      .divLanguage{
+
+      .divLanguage {
         display: flex;
         //justify-items: center;
         align-items: center;
         //align-content: center;
-        
+
       }
 
 
     }
 
 
-  }//fim resumoQuali
+  }
 
-  
+  //fim resumoQuali
+
+
 
   .portfolio {
     height: 100vh;
@@ -207,8 +214,89 @@
 
   }
 
-  footer{
+  footer {
     background-color: #2c2c2c;
-    height: 80vh;
+    //height: 80vh;
+
+
+    .divIconFooter {
+      padding-top: 4rem;
+      text-align: center;
+
+      //width: 40vw;
+      .iconFooter {
+        width: 20vw;
+
+        h5 {
+          padding-top: 1rem;
+          color: var(--gray-100);
+        }
+
+        h6:first-of-type {
+          //primeiro do tipo
+          padding-top: 1rem;
+        }
+
+        h6 {
+          color: var(--gray-200);
+        }
+
+        .icon {
+          transition: filter 0.2s;
+        }
+
+        .icon:hover {
+          filter: brightness(0.9);
+        }
+
+      }
+
+    }
+
+    //div footer
+
+
+
+    .icons {
+      text-align: center;
+      padding-top: 5rem;
+
+      .icon {
+        margin: .5rem;
+        transition: filter 0.2s;
+      }
+
+      .icon:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 6rem;
+      color: var(--gray-200);
+      display: flex;
+      justify-content: center;
+
+      p:first-of-type {
+        padding-right: 0.5rem;
+        border-right: 1px solid var(--gray-200);
+      }
+
+      p:nth-of-type(2n) {//segundo do tipo
+        padding-left: 0.5rem;
+        a{
+          color: var(--gray-100);
+          cursor: pointer;
+          transition: color 0.3s;
+        }
+        a:hover{
+          color:#00ACCC;
+        }
+      }
+
+    }
+
+
   }
 }

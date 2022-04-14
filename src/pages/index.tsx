@@ -5,7 +5,22 @@ import Image from 'next/image';
 
 import styles from '../styles/Home.module.scss';
 
-import { FaGithub, FaLinkedinIn, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import loginFirebase from '../../public/img/loginFirebase.gif';
+
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaGraduationCap,
+  FaBriefcase,
+  FaWhatsapp,
+  FaInstagram
+} from 'react-icons/fa';
+import {
+  HiOutlineMail,
+  HiOutlinePhone,
+  HiOutlineLocationMarker
+} from 'react-icons/hi'
+
 
 import Resumo from './texts/resumo';
 import FotoPerfil from '../../public/img/FotoPerfil.jpg';
@@ -13,7 +28,7 @@ import FotoPerfil from '../../public/img/FotoPerfil.jpg';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
-import CircularProgress from '@mui/material/CircularProgress';
+//import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Home() {
   return (
@@ -339,36 +354,8 @@ export default function Home() {
           <div className={`col-4 ${styles.language}`}>
             <h6>Languages</h6>
             <div className={styles.divLanguage}>
-              <p>Português 9falta arrumar ou tirar- </p>
-              <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-                <CircularProgress
-                  variant='determinate'
-                  value={100}
-                  size={40}
-                />
-                <Box
-                  sx={{
+              <p>Português - Nativo</p>
 
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                    position: 'absolute',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-
-                  }}
-                >
-                  <Typography
-                    variant="body2"
-                    component="div"
-                    color="text.secondary"
-
-
-                  >100%</Typography>
-                </Box>
-              </Box>
             </div>
 
             <p>Inglês - Intermediário</p>
@@ -396,6 +383,14 @@ export default function Home() {
         <h1>Projetos realizados</h1>
 
         <div className={`row justify-content-center ${styles.projetos}`}>
+
+          <Image
+            src={loginFirebase}
+            width={640}
+            height={360}
+            objectFit='cover'
+          />
+
           <div className={`col-4 ${styles.colLeft}`}>
 
           </div>
@@ -406,8 +401,59 @@ export default function Home() {
       </div>{/* fim portfolio */}
 
       <footer>
+        <div className={`row justify-content-center ${styles.divIconFooter}`}>
+          <div className={`col-4 ${styles.iconFooter}`}>
+            <HiOutlineLocationMarker
+              color='#fff'
+              size='2.5em'
+              className={styles.icon}
+            />
+            <h5>Localização</h5>
+            <h6 >Cuiabá-MT</h6>
+            <h6>Brasil</h6>
+          </div>
+          <div className={`col-4 ${styles.iconFooter}`}>
+            <HiOutlineMail
+              color='#fff'
+              size='2.5em'
+              className={styles.icon}
+            />
+            <h5>Envie um email</h5>
+            <h6>ezefferth@gmail.com</h6>
+          </div>
+          <div className={`col-4 ${styles.iconFooter}`}>
+            <HiOutlinePhone
+              color='#fff'
+              size='2.5em'
+              className={styles.icon}
+            />
+            <h5>Contato</h5>
+            <h6><FaWhatsapp /> 65 99649 3590</h6>
+          </div>
+        </div>
+        <div className={styles.icons}>
+          <FaGithub
+            color='#fff'
+            size='1.5em'
+            className={styles.icon}
+          />
+          <FaLinkedinIn
+            color='#fff'
+            size='1.5em'
+            className={styles.icon}
+          />
+          <FaInstagram
+            color='#fff'
+            size='1.5em'
+            className={styles.icon}
+          />
+        </div>
 
-        
+        <div className={styles.copyright}>
+          <p>Copyright &copy;Todos os direitos reservados - Ezéfferth A F Fernandes</p>
+          <p>Disign by <a>@ezefferth</a></p>
+        </div>
+
       </footer>
     </div>
   )
