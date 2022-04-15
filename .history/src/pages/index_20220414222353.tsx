@@ -395,10 +395,10 @@ export default function Home() {
 
 
           <div className={`col-4 ${styles.colLeft}`}>
-            {/* <div className={`${styles.divImage}`}>
+            <div className={`${styles.divImage}`}>
               <h6>Login page with firebase</h6>
               <Image
-
+                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
                 src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
                 width={426}
                 height={240}
@@ -408,14 +408,13 @@ export default function Home() {
                 onMouseLeave={() => setStateLogin(false)}
               //onMouseEnter={}
               />
-            </div> */}
+            </div>
             <div className={`${styles.divImage}`}>
               <h6>Login page with firebase</h6>
               <img
                 /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
                 src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
-                width={426}
+                width='426px'
                 height={240}
                 className={styles.image}
                 onMouseEnter={() => setStateLogin(true)}

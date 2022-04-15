@@ -205,12 +205,15 @@
           text-align: center;
           padding-top: 3rem;
 
+          .loginfirebase{
+            background-image: url(../../public/img/loginFirebase.gif);
+          }
           .image {
             animation-play-state: running;
             cursor: pointer;
             filter: brightness(0.9);
             transition: filter 0.2s;
-
+            
           }
           .image:hover {
             filter: brightness(1);

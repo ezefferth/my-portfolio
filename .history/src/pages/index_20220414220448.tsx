@@ -395,37 +395,23 @@ export default function Home() {
 
 
           <div className={`col-4 ${styles.colLeft}`}>
-            {/* <div className={`${styles.divImage}`}>
+            <div className={`${styles.divImage}`}>
               <h6>Login page with firebase</h6>
               <Image
-
-                src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
+              /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
+                src={loginFirebase}
                 width={426}
                 height={240}
+                
                 objectFit='cover'
                 className={styles.image}
                 onMouseEnter={() => setStateLogin(true)}
                 onMouseLeave={() => setStateLogin(false)}
               //onMouseEnter={}
               />
-            </div> */}
-            <div className={`${styles.divImage}`}>
-              <h6>Login page with firebase</h6>
-              <img
-                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
-                src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
-                width={426}
-                height={240}
-                className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
-              //onMouseEnter={}
-              />
             </div>
+
           </div>
-
-
           <div className={`col-4 ${styles.colRight}`}>
 
           </div>

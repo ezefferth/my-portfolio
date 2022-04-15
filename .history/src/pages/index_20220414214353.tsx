@@ -6,7 +6,6 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 
 import loginFirebase from '../../public/img/loginFirebase.gif';
-import loginFirebaseStatic from '../../public/img/loginFirebaseStatic.png';
 
 import {
   FaGithub,
@@ -34,7 +33,7 @@ import Typography from '@mui/material/Typography';
 export default function Home() {
 
 
-  const [stateLogin, setStateLogin] = useState<boolean>(false);
+  const [ stateLogin, setStateLogin] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -395,37 +394,20 @@ export default function Home() {
 
 
           <div className={`col-4 ${styles.colLeft}`}>
-            {/* <div className={`${styles.divImage}`}>
+            <div className={`${styles.divImage}`}>
               <h6>Login page with firebase</h6>
               <Image
-
-                src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
+                src={loginFirebase}
                 width={426}
                 height={240}
                 objectFit='cover'
                 className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
-              //onMouseEnter={}
-              />
-            </div> */}
-            <div className={`${styles.divImage}`}>
-              <h6>Login page with firebase</h6>
-              <img
-                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
-                src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
-                width={426}
-                height={240}
-                className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
+                onMouseEnter={() => console.log('ok')}
               //onMouseEnter={}
               />
             </div>
+
           </div>
-
-
           <div className={`col-4 ${styles.colRight}`}>
 
           </div>

@@ -413,8 +413,8 @@ export default function Home() {
               <h6>Login page with firebase</h6>
               <img
                 /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
-                src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
+                src={loginFirebase}
+                alt='login firebase'
                 width={426}
                 height={240}
                 className={styles.image}

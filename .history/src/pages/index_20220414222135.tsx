@@ -395,10 +395,10 @@ export default function Home() {
 
 
           <div className={`col-4 ${styles.colLeft}`}>
-            {/* <div className={`${styles.divImage}`}>
+            <div className={`${styles.divImage}`}>
               <h6>Login page with firebase</h6>
               <Image
-
+                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
                 src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
                 width={426}
                 height={240}
@@ -408,85 +408,85 @@ export default function Home() {
                 onMouseLeave={() => setStateLogin(false)}
               //onMouseEnter={}
               />
-            </div> */}
-            <div className={`${styles.divImage}`}>
-              <h6>Login page with firebase</h6>
-              <img
-                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
-                src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
-                width={426}
-                height={240}
-                className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
-              //onMouseEnter={}
-              />
             </div>
           </div>
-
-
-          <div className={`col-4 ${styles.colRight}`}>
-
-          </div>
-        </div>
-      </div>{/* fim portfolio */}
-
-      <footer>
-        <div className={`row justify-content-center ${styles.divIconFooter}`}>
-          <div className={`col-4 ${styles.iconFooter}`}>
-            <HiOutlineLocationMarker
-              color='#fff'
-              size='2.5em'
-              className={styles.icon}
+          <div className={`${styles.divImage}`}>
+            <h6>Login page with firebase</h6>
+            <Image
+              /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
+              src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
+              width={426}
+              height={240}
+              objectFit='cover'
+              className={styles.image}
+              onMouseEnter={() => setStateLogin(true)}
+              onMouseLeave={() => setStateLogin(false)}
+            //onMouseEnter={}
             />
-            <h5>Localização</h5>
-            <h6 >Cuiabá-MT</h6>
-            <h6>Brasil</h6>
           </div>
-          <div className={`col-4 ${styles.iconFooter}`}>
-            <HiOutlineMail
-              color='#fff'
-              size='2.5em'
-              className={styles.icon}
-            />
-            <h5>Envie um email</h5>
-            <h6>ezefferth@gmail.com</h6>
-          </div>
-          <div className={`col-4 ${styles.iconFooter}`}>
-            <HiOutlinePhone
-              color='#fff'
-              size='2.5em'
-              className={styles.icon}
-            />
-            <h5>Contato</h5>
-            <h6><FaWhatsapp /> 65 99649 3590</h6>
-          </div>
-        </div>
-        <div className={styles.icons}>
-          <FaGithub
-            color='#fff'
-            size='1.5em'
-            className={styles.icon}
-          />
-          <FaLinkedinIn
-            color='#fff'
-            size='1.5em'
-            className={styles.icon}
-          />
-          <FaInstagram
-            color='#fff'
-            size='1.5em'
-            className={styles.icon}
-          />
         </div>
 
-        <div className={styles.copyright}>
-          <p>Copyright &copy;Todos os direitos reservados - Ezéfferth A F Fernandes</p>
-          <p>Disign by <a>@ezefferth</a></p>
-        </div>
+        <div className={`col-4 ${styles.colRight}`}>
 
-      </footer>
+        </div>
+      </div>
+    </div>{/* fim portfolio */ }
+
+  <footer>
+    <div className={`row justify-content-center ${styles.divIconFooter}`}>
+      <div className={`col-4 ${styles.iconFooter}`}>
+        <HiOutlineLocationMarker
+          color='#fff'
+          size='2.5em'
+          className={styles.icon}
+        />
+        <h5>Localização</h5>
+        <h6 >Cuiabá-MT</h6>
+        <h6>Brasil</h6>
+      </div>
+      <div className={`col-4 ${styles.iconFooter}`}>
+        <HiOutlineMail
+          color='#fff'
+          size='2.5em'
+          className={styles.icon}
+        />
+        <h5>Envie um email</h5>
+        <h6>ezefferth@gmail.com</h6>
+      </div>
+      <div className={`col-4 ${styles.iconFooter}`}>
+        <HiOutlinePhone
+          color='#fff'
+          size='2.5em'
+          className={styles.icon}
+        />
+        <h5>Contato</h5>
+        <h6><FaWhatsapp /> 65 99649 3590</h6>
+      </div>
     </div>
+    <div className={styles.icons}>
+      <FaGithub
+        color='#fff'
+        size='1.5em'
+        className={styles.icon}
+      />
+      <FaLinkedinIn
+        color='#fff'
+        size='1.5em'
+        className={styles.icon}
+      />
+      <FaInstagram
+        color='#fff'
+        size='1.5em'
+        className={styles.icon}
+      />
+    </div>
+
+    <div className={styles.copyright}>
+      <p>Copyright &copy;Todos os direitos reservados - Ezéfferth A F Fernandes</p>
+      <p>Disign by <a>@ezefferth</a></p>
+    </div>
+
+  </footer>
+    </div >
   )
 }
