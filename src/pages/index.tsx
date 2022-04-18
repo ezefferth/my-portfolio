@@ -5,8 +5,16 @@ import Image from 'next/image';
 
 import styles from '../styles/Home.module.scss';
 
-import loginFirebase from '../../public/img/loginFirebase.gif';
-import loginFirebaseStatic from '../../public/img/loginFirebaseStatic.png';
+
+//import loginFirebase from '../../public/img/loginFirebase.gif';
+import FotoPerfil from '../../public/img/FotoPerfil.jpg';
+
+
+
+import ReactPlayer from 'react-player';
+
+import format from 'date-fns/format';
+
 
 import {
   FaGithub,
@@ -24,7 +32,7 @@ import {
 
 
 import Resumo from './texts/resumo';
-import FotoPerfil from '../../public/img/FotoPerfil.jpg';
+
 
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -35,6 +43,9 @@ export default function Home() {
 
 
   const [stateLogin, setStateLogin] = useState<boolean>(false);
+  const [stateDesvCien, setStateDesvCien] = useState<boolean>(false);
+
+  const date = format(new Date(), 'yyyy');
 
   return (
     <div className={styles.container}>
@@ -65,8 +76,11 @@ export default function Home() {
 
       <div className={styles.presentation}>
 
-        <h1>Ezéfferth Chlysman</h1>
-        <h6>FULL-STACK DEVELOPER</h6>
+        <div className={styles.titles}>
+          <h1>Ezéfferth Chlysman</h1>
+          <h6>FULL-STACK DEVELOPER</h6>
+        </div>
+
 
         <div className={styles.iconsDiv}>
           <FaGithub
@@ -83,7 +97,7 @@ export default function Home() {
 
         <h5 className={styles.sobreH5}>Sobre</h5>
 
-        <h1>Um pouco sobre meu trabalho...</h1>
+        <h1 className={styles.sobreH1}>Um pouco sobre meu trabalho...</h1>
 
         <div className={`row ${styles.resumo}`}>
           <div className={`col ${styles.colLeft}`}>
@@ -389,47 +403,32 @@ export default function Home() {
         <h5>Portfólio</h5>
         <h1>Projetos realizados</h1>
 
-        <div className={`row justify-content-center ${styles.projetos}`}>
+        <div className={` ${styles.projetos}`}>
 
 
+          <div className={styles.projeto}>
+            <h6>Login page with firebase</h6>
 
-
-          <div className={`col-4 ${styles.colLeft}`}>
-            {/* <div className={`${styles.divImage}`}>
-              <h6>Login page with firebase</h6>
-              <Image
-
-                src={stateLogin ? (loginFirebase) : (loginFirebaseStatic)}
-                width={426}
-                height={240}
-                objectFit='cover'
-                className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
-              //onMouseEnter={}
-              />
-            </div> */}
-            <div className={`${styles.divImage}`}>
-              <h6>Login page with firebase</h6>
-              <img
-                /* stateLogin ? (loginFirebase) : (loginFirebaseStatic) */
-                src='../../public/img/loginFirebase.gif'
-                alt='loginfirebase'
-                width={426}
-                height={240}
-                className={styles.image}
-                onMouseEnter={() => setStateLogin(true)}
-                onMouseLeave={() => setStateLogin(false)}
-              //onMouseEnter={}
-              />
-            </div>
+            <p>
+              Tem como objetivo demonstrar uma página de login responsivo
+              abordando alguns elementos de SASS, usando Firebase Authenticator
+              para realização do login.
+            </p>
           </div>
 
 
-          <div className={`col-4 ${styles.colRight}`}>
-
+          <div className={styles.projeto}>
+            <h6>Desvendando o Científico</h6>
+            <p>O site foi criado com intúito de ajudar alunos de graduação sobre iniciação científica.
+              Projeto desenvolvido em parceria com <a>@jhemilly</a>, estudante de Medicina na UniCesumar.
+            </p>
+          </div>
+          <div className={styles.projeto}>
+            <h6>Distance Between</h6>
           </div>
         </div>
+
+
       </div>{/* fim portfolio */}
 
       <footer>
@@ -482,7 +481,7 @@ export default function Home() {
         </div>
 
         <div className={styles.copyright}>
-          <p>Copyright &copy;Todos os direitos reservados - Ezéfferth A F Fernandes</p>
+          <p>&copy;{date} - Ezéfferth A F Fernandes</p>
           <p>Disign by <a>@ezefferth</a></p>
         </div>
 
