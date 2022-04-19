@@ -9,9 +9,8 @@ import styles from '../styles/Home.module.scss';
 //import loginFirebase from '../../public/img/loginFirebase.gif';
 import FotoPerfil from '../../public/img/FotoPerfil.jpg';
 
+import Navbar from './components/Navbar';
 
-
-import ReactPlayer from 'react-player';
 
 import format from 'date-fns/format';
 
@@ -22,7 +21,8 @@ import {
   FaGraduationCap,
   FaBriefcase,
   FaWhatsapp,
-  FaInstagram
+  FaInstagram,
+  FaTwitter,
 } from 'react-icons/fa';
 import {
   HiOutlineMail,
@@ -42,8 +42,6 @@ import Typography from '@mui/material/Typography';
 export default function Home() {
 
 
-  const [stateLogin, setStateLogin] = useState<boolean>(false);
-  const [stateDesvCien, setStateDesvCien] = useState<boolean>(false);
 
   const date = format(new Date(), 'yyyy');
 
@@ -52,8 +50,9 @@ export default function Home() {
       <Head>
         <title>My Portfolio</title>
       </Head>
+      <Navbar />
 
-      {/* <nav className="navbar navbar-dark bg-dark">
+      {/* <nav className="navbar navbar-dark bg-dark fixed-topavigation">
         <div className="container-fluid">
           <button className="navbar-toggler"
             type="button"
@@ -77,19 +76,22 @@ export default function Home() {
       <div className={styles.presentation}>
 
         <div className={styles.titles}>
+          <h3>PORTFOLIO</h3>
           <h1>Ezéfferth Chlysman</h1>
-          <h6>FULL-STACK DEVELOPER</h6>
+          <p>FULL-STACK DEVELOPER</p>
         </div>
 
 
         <div className={styles.iconsDiv}>
           <FaGithub
             size={30}
+            onClick={() => window.open('https://github.com/ezefferth', '_blank')}
             className={styles.icon}
           />
           <FaLinkedinIn
             size={30}
             className={styles.icon}
+            onClick={() => window.open('https://www.linkedin.com/in/ezefferth/', '_blank')}
           />
         </div>
       </div>
@@ -258,7 +260,7 @@ export default function Home() {
             <p>2021-2022</p>
           </div>
           <div className={`col-4 ${styles.colRight}`}>
-            <h6>heimdallr.com.br</h6>
+            <h6>Heimdallr</h6>
             <p>Assistente de Suporte de Segurança da Informação, atuando na área de suporte à redes de
               computadores, segurança da informação, firewalls.</p>
             <p>Fortinet / NSE-1 / NSE-2 / NSE-3</p>
@@ -365,7 +367,12 @@ export default function Home() {
           </div>
           <div className={`col-4 ${styles.colRight}`}>
             <h6>Universidade Federal de Mato Grosso</h6>
-            <p>Colocar resumo aki</p>
+            <p>Engenharia; algoritmos e estrutura de dados; projeto e análise de algoritmos;
+              circuitos e eletronica; banco de dados; microcontroladores e sistemas embarcados; redes de computadores;
+              inteligência artificial; instrumentação e automação industrial; sinais e sistemas, processamento de sinais.
+
+
+            </p>
           </div>
         </div>{/* fim row */}
 
@@ -407,7 +414,7 @@ export default function Home() {
 
 
           <div className={styles.projeto}>
-            <h6>Login page with firebase</h6>
+            <h6 onClick={() => window.open('https://github.com/ezefferth/login-page-firebase', '_blank')}>Login page with firebase</h6>
 
             <p>
               Tem como objetivo demonstrar uma página de login responsivo
@@ -418,13 +425,34 @@ export default function Home() {
 
 
           <div className={styles.projeto}>
-            <h6>Desvendando o Científico</h6>
+            <h6 onClick={() => window.open('http://desvendandocientifico.com.br/', '_blank')}>Desvendando o Científico</h6>
             <p>O site foi criado com intúito de ajudar alunos de graduação sobre iniciação científica.
               Projeto desenvolvido em parceria com <a>@jhemilly</a>, estudante de Medicina na UniCesumar.
             </p>
           </div>
           <div className={styles.projeto}>
-            <h6>Distance Between</h6>
+            <h6 onClick={() => window.open('https://github.com/ezefferth/distance-between-leaflet', '_blank')}>Distance Between</h6>
+            <p>Com a biblioteca OpenSource Leaflet e nextjs, foi desenvolvido uma onepage
+              com intúito de calcular uma distância e tempo de trajeto
+              entre dois pontos a partir da da cidade selecionada.
+
+            </p>
+          </div>
+          <div className={styles.projeto}>
+            <h6 onClick={() => window.open('https://github.com/ezefferth/nlw5-podcastr', '_blank')}>NLW5 Podcastr</h6>
+            <p>
+              Este projeto foi desenvolvido em conjunto com a RocketSeat, Next Level Week 5.
+              Nele é abordado o desenvolvimento de uma aplicação podcast web com React, framework NextJS, SASS, entre outros.
+            </p>
+          </div>
+
+          <div className={styles.outrosProjetos}>
+            <h6>Outros projetos</h6>
+            <div className={styles.p}>
+              <p>Outros projetos pode ser econtrados no meu repositório </p>
+              <p onClick={() => window.open('https://github.com/ezefferth', '_blank')}>&nbsp;git.</p>
+            </div>
+
           </div>
         </div>
 
@@ -462,21 +490,31 @@ export default function Home() {
             <h6><FaWhatsapp /> 65 99649 3590</h6>
           </div>
         </div>
+        <p className={styles.followme}>Follow-me</p>
         <div className={styles.icons}>
           <FaGithub
-            color='#fff'
+            //color='#fff'
             size='1.5em'
             className={styles.icon}
+            onClick={() => window.open('https://github.com/ezefferth', '_blank')}
           />
           <FaLinkedinIn
-            color='#fff'
+            //color='#fff'
             size='1.5em'
             className={styles.icon}
+            onClick={() => window.open('https://www.linkedin.com/in/ezefferth/', '_blank')}
           />
           <FaInstagram
-            color='#fff'
+            //color='#fff'
             size='1.5em'
             className={styles.icon}
+            onClick={() => window.open('https://www.instagram.com/ezefferth/', '_blank')}
+          />
+          <FaTwitter
+            //color='#fff'
+            size='1.5em'
+            className={styles.icon}
+            onClick={() => window.open('https://www.twitter.com/ezefferth/', '_blank')}
           />
         </div>
 
