@@ -1,14 +1,90 @@
-
-.navbar{
-  background-color: rgba(0, 0, 0, 0.15);
+.toggle {
   position: fixed;
-}
+  //width: 10rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1; //traz para frente
+  width: 8rem;
+  height: 12rem;
+  margin-top: 50vh;
+  transform: translate(0, -50%);
 
-.item{
-  display: block;
-}
 
-.toggler{
-  width: 10rem;
-  position: fixed;
+  .item {
+    cursor: pointer;
+    height: 2rem;
+
+    //position: absolute;
+    //display: block;
+    p {
+      padding-top: 0.35rem;
+      color: var(--gray-100);
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1rem;
+      padding-left: 0.75rem;
+      animation-name: toOffShow;
+      animation-duration: 0.5s;
+      transition: font-size 0.2s;
+    }
+
+    p:hover {
+      font-size: 1.05rem;
+    }
+
+    @keyframes toOffShow {
+      from {
+        padding-left: 1rem;
+      }
+
+      to {
+        padding-left: 0.75rem;
+      }
+    }
+  }
+
+  .item:hover {
+    filter: brightness(0.9);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .itemCurrent {
+    cursor: pointer;
+    height: 2rem;
+
+    p {
+
+      padding-top: 0.35rem;
+      color: #00accc;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.1rem;
+      //padding-left: 1rem;
+      animation-name: toShow;
+      animation-duration: 0.5s;
+      padding-left: 1rem;
+      transition: font-size 0.2s;
+
+    }
+
+    p:hover {
+      font-size: 1.125rem;
+    }
+
+    @keyframes toShow {
+      from {
+        padding-left: 0.75rem;
+      }
+
+      to {
+        padding-left: 1rem
+      }
+    }
+  }
+
+  .itemCurrent:hover {
+    filter: brightness(0.9);
+    background-color: rgba(0, 0, 0, 0.3);
+
+  }
+
+
+
 }

@@ -2,6 +2,38 @@
   display: block;
   //max-width: 100vw;
   overflow: hidden; //tira os espaços que passam do width 100vw
+  position: absolute;
+
+  .toggle {
+    position: fixed;
+    //width: 10rem;
+    background-color: rgba(0, 0, 0, 0.90);
+    z-index: 1; //traz para frente
+    width: 8rem;
+    height: 12rem;
+    margin-top: 50vh;
+    transform: translate(0, -50%);
+  
+  
+    .item {
+      cursor: pointer;
+      height: 2rem;
+      //position: absolute;
+      //display: block;
+      p {
+        padding-top: 0.35rem;
+        color: var(--gray-100);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1rem;
+        padding-left: 0.75rem;
+        
+      }
+    }
+    .item:hover{
+      filter: brightness(0.9);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
 
   .presentation {
     position: relative;
@@ -15,6 +47,7 @@
     max-width: 100vw;
     height: 100vh;
 
+    
     .titles {
       max-width: 100vw;
 
