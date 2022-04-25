@@ -12,7 +12,10 @@ export default function ToggleBar() {
     setDistance(window.scrollY);
   }
 
-  window.addEventListener('scroll', onScroll);
+  if (typeof window !== "undefined") {//corrige o erro de windows undefined
+    window.addEventListener('scroll', onScroll);
+  }
+
 
   function scrollingTo(id: string) {
     document.getElementById(id)?.scrollIntoView({
@@ -24,6 +27,9 @@ export default function ToggleBar() {
   //scrollingTo('home')
 
   return (
+
+
+
     <div className={styles.toggle}>
       <div className={distance < 570 ? styles.itemCurrent : styles.item}>
         <p onClick={() => scrollingTo('home')}>Home</p>
