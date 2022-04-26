@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -45,6 +45,26 @@ import Typography from '@mui/material/Typography';
 //import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Home() {
+
+  // const [fullScreen, setFullScreen] = useState<boolean>(true);
+  // const [changeScreen, setChangeScreen] = useState<number>(0);
+
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {//corrige o erro de windows undefined
+  //     if (window.matchMedia("(max-width:600px)").matches) {
+  //       console.log()
+  //       setFullScreen(false)
+  //     }
+  //   }
+  // }, [changeScreen]);
+
+  // function screenChanged() {
+  //   setChangeScreen(changeScreen + 1);
+  // }
+
+  // if (typeof window !== 'undefined') {
+  //   window.addEventListener('resize', screenChanged);
+  // }
 
 
 
@@ -94,8 +114,9 @@ export default function Home() {
 
         <h1 className={styles.sobreH1}>Um pouco sobre meu trabalho...</h1>
 
+
         <div className={`row ${styles.resumo}`}>
-          <div className={`col ${styles.colLeft}`}>
+          <div className={`col-4 ${styles.colLeft}`}>
             <Image
               width={120}
               height={120}
@@ -109,7 +130,8 @@ export default function Home() {
           <div className={`col-4 ${styles.colRight}`}>
             <Resumo />
           </div>
-        </div>{/* fim div row */}
+        </div>
+
 
         <div className={`row ${styles.profile}`}>
           <div className={`col ${styles.colLeft}`}>
@@ -374,10 +396,8 @@ export default function Home() {
           <div className={`row justify-content-center ${styles.profEduFinal}`}>
             <div className={`col-4 ${styles.language}`}>
               <h6>Languages</h6>
-              <div className={styles.divLanguage}>
-                <p>Português - Nativo</p>
+              <p>Português - Nativo</p>
 
-              </div>
 
               <p>Inglês - Intermediário</p>
               <p>Espanhol - Básico</p>
