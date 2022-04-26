@@ -31,10 +31,10 @@ export default function ToggleBar() {
 
 
     <div className={styles.toggle}>
-      <div className={distance < 570 ? styles.itemCurrent : styles.item}>
+      <div className={distance < 550 ? styles.itemCurrent : styles.item}>
         <p onClick={() => scrollingTo('home')}>Home</p>
       </div>
-      <div className={distance > 570 && distance < 1420 ? styles.itemCurrent : styles.item}>
+      <div className={distance > 550 && distance < 1420 ? styles.itemCurrent : styles.item}>
         <p onClick={() => scrollingTo('about')}>Sobre</p>
       </div>
       <div className={distance > 1420 && distance < 2400 ? styles.itemCurrent : styles.item}>

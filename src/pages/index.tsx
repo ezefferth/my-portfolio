@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import { GetStaticProps } from 'next';
+
+import React from 'react'
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -11,6 +13,7 @@ import FotoPerfil from '../../public/img/FotoPerfil.jpg';
 
 import ToggleBar from './components/ToggleBar';
 
+import fundo from '../../public/img/fundo.png';
 
 import format from 'date-fns/format';
 
@@ -38,6 +41,7 @@ import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 
+
 //import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Home() {
@@ -54,11 +58,20 @@ export default function Home() {
       <ToggleBar />
 
       <div className={styles.presentation} id='home'>
+        <Image
+          src={fundo}
+          alt='fundo'
+          layout='fill'
+          objectFit='cover'
+          className={styles.background}
+        />
+
 
         <div className={styles.titles}>
           <h3>PORTFOLIO</h3>
           <h1>Ezéfferth Chlysman</h1>
           <p>FULL-STACK DEVELOPER</p>
+
         </div>
 
 
@@ -89,6 +102,7 @@ export default function Home() {
               src={FotoPerfil}
               objectFit='cover'
               className={styles.fotoPerfil}
+              alt='perfil'
 
             />
           </div>
@@ -509,3 +523,14 @@ export default function Home() {
     </div>
   )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+
+
+
+  return {
+    props: {
+    },
+    revalidate: 60 * 60 * 24
+  };
+};
