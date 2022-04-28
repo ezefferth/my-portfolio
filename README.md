@@ -1,4 +1,6 @@
 ## Welcome to my portfolio
 
 
-something here letter
+Este é meu web site Portfolio, seja bem vindo!
+
+OpenSource Code, enjoy this code! If it's helpful.
