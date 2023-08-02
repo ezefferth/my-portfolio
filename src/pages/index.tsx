@@ -20,20 +20,20 @@ import Footer from './components/footer'
 
 
 
-
-
-//import CircularProgress from '@mui/material/CircularProgress';
-
 export default function Home() {
 
-  
+
 
   return (
     <div className={styles.container}>
       <Head>
         <title>Meu Portfolio</title>
+        <link rel='icon' type="image/png" href='/logo2.png' sizes='32x32'/>
+
       </Head>
+
       <ToggleBar />
+      
       <Presentation />
       <About />
       <ResumoQuali />
@@ -43,9 +43,9 @@ export default function Home() {
   )
 }
 
+
+
 export const getStaticProps: GetStaticProps = async () => {
-
-
 
   return {
     props: {
