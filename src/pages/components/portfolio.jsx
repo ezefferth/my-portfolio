@@ -13,6 +13,13 @@ export default function Portfolio() {
 
 
         <div className={styles.projeto}>
+          <h6 onClick={() => window.open('https://github.com/ezefferth/ToDo-List', '_blank')}>ToDo List</h6>
+
+          <p>
+            App ToDo List em Com React Native
+          </p>
+        </div>
+        <div className={styles.projeto}>
           <h6 onClick={() => window.open('https://github.com/ezefferth/login-page-firebase', '_blank')}>Login page with firebase</h6>
 
           <p>
