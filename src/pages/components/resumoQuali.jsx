@@ -11,6 +11,22 @@ export default function ResumoQuali() {
       <h1>Minhas Qualificações</h1>
       <div id="experiencia">
         <h4>Experiência Profissional</h4>
+
+        <div className={`row justify-content-center ${styles.profEdu}`}>
+            <div className={`col-4 ${styles.colLeft}`}>
+              <h6>Professor de Ensino Superior</h6>
+              <FaBriefcase className={styles.icon} />
+              <p>2024</p>
+              <p>Atualmente</p>
+              {/* <p>Atualmente</p> */}
+            </div>
+            <div className={`col-4 ${styles.colRight}`}>
+              <h6>Centro Universitário da Grande Dourados</h6>
+              <p>
+                Professor de Metodologias para Desenvolvimento de Software e Gerência de Configuração.
+              </p>
+            </div>
+          </div>
         <div className={`row justify-content-center ${styles.profEdu}`}>
           <div className={`col-4 ${styles.colLeft}`}>
             <h6>Analista de Tecnologia da Informação</h6>
@@ -138,8 +154,8 @@ export default function ResumoQuali() {
           <div className={`col-4 ${styles.colLeft}`}>
             <h6>MBA em Engenharia de Software</h6>
             <FaGraduationCap className={styles.iconE} size="1.35em" />
-            <p>Pós-graduando em Engenharia de Software</p>
-            <p>2022</p>
+            <p>Pós-graduado em Engenharia de Software</p>
+            <p>10/2023</p>
           </div>
           <div className={`col-4 ${styles.colRight}`}>
             <h6>Universidade Tecnológica Federal do Paraná</h6>
