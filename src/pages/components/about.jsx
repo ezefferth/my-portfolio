@@ -35,8 +35,8 @@ export default function About() {
         <div className={`col-4 ${styles.colRight}`}>
           <p className={styles.resumoText}>
             Formado em engenharia de computação e técnico em tecnologia da informação na
-            UFMT. Pós-graduando em MBA em engenharia de software e governança de TI.
-            FullStack Developer como freelancer. Desenvolvimento web com react, nextjs,
+            UFMT. Pós-graduado em MBA em engenharia de software e governança de TI.
+            FullStack Developer como freelancer. Desenvolvimento web com react,
             mongodb, firebase, leaflet.
           </p>
         </div>
@@ -71,13 +71,13 @@ export default function About() {
               <Box sx={{ width: '100%', mr: 1 }}>
                 <LinearProgress
                   variant='determinate'
-                  value={75}
+                  value={84}
                   valueBuffer={84}
                 />
               </Box>
               <Box sx={{ minWidth: 35 }}>
                 <Typography variant="body2" color="text.secondary">
-                  75%
+                  84%
                 </Typography>
               </Box>
             </Box>
@@ -87,13 +87,13 @@ export default function About() {
               <Box sx={{ width: '100%', mr: 1 }}>
                 <LinearProgress
                   variant='determinate'
-                  value={84}
-                  valueBuffer={84}
+                  value={72}
+                  valueBuffer={72}
                 />
               </Box>
               <Box sx={{ minWidth: 35 }}>
                 <Typography variant="body2" color="text.secondary">
-                  84%
+                  72%
                 </Typography>
               </Box>
             </Box>
