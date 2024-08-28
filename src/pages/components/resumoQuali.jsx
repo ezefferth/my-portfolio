@@ -152,6 +152,22 @@ export default function ResumoQuali() {
         <h4>Educação</h4>
         <div className={`row justify-content-center ${styles.profEdu}`}>
           <div className={`col-4 ${styles.colLeft}`}>
+            <h6>Computação Aplicada</h6>
+            <FaGraduationCap className={styles.iconE} size="1.35em" />
+            <p>Mestrando em Computação Aplicada</p>
+            <p>2024 --</p>
+          </div>
+          <div className={`col-4 ${styles.colRight}`}>
+            <h6>Universidade Federal de Mato Grosso do Sul</h6>
+            <p>
+              Promover a competência acadêmica, científica e tecnológica na área de
+            Ciência da Computação; promover a formação de pessoal qualificado para o exercício das atividades
+            profissionais de pesquisa e de inovação tecnológica; e fomentar o desenvolvimento de processos e produtos.
+            </p>
+          </div>
+        </div>
+        <div className={`row justify-content-center ${styles.profEdu}`}>
+          <div className={`col-4 ${styles.colLeft}`}>
             <h6>MBA em Engenharia de Software</h6>
             <FaGraduationCap className={styles.iconE} size="1.35em" />
             <p>Pós-graduado em Engenharia de Software</p>
